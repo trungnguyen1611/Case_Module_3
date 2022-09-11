@@ -43,7 +43,10 @@ const server = http.createServer((req, res) => {
             }
         } else {
             let cookieReq = cookie.parse(req.headers.cookie);
-            let cookieData = JSON.parse(cookieReq.cookieLogin);
+            let cookieData={}
+            if (cookieReq.cookieLogin) {
+                cookieData = JSON.parse(cookieReq.cookieLogin);
+            }
 
             switch (urlPath) {
                 case '/':
