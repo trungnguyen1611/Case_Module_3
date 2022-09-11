@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bill</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../css/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <table class="table table-striped">
+        <tr>
+            <td colspan="4"><h4>Mã hóa đơn:</h4>
+                <h1>{id-bill}</h1></td>
+        </tr>
+        <tr>
+
+        </tr>
+        <tr>
+            <th>STT</th>
+            <th>Tên món</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+        </tr>
+        {result}
+        <tr class="bg-light">
+            <th colspan="2">Tổng tiền:</th>
+            <th>{total}</th>
+            <td></td>
+        </tr>
+    </table>
+    <div>
+        <form action="/home" method="get">
+            <input type="submit" class="btn btn-group btn-secondary" value="Back">
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

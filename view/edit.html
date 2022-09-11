@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+
+</head>
+<body>
+<div style="padding-left: 40%">
+<h1>Chỉnh sửa món:</h1>
+<form action="/home/manager/edit" method="post">
+    <table>
+        <tr>
+            <th>Mã</th>
+            <td><input type="text" name="id"></td>
+        </tr>
+        <tr>
+            <th>Loại</th>
+            <td><input type="text" name="type"></td>
+        </tr>
+        <tr>
+            <th>Tên</th>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <th>Giá</th>
+            <td><input type="text" name="price"></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Submit</button></td>
+        </tr>
+    </table>
+</form>
+
+
+</div>
+<hr>
+<a href="/home/manager" style="padding-left: 40%">Back</a>
+</body>
+</html>

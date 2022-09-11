@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../css/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center text-uppercase text-danger">COFFEE MANAGER</h1>
+
+    <hr>
+
+    <form action="/log_out" method="post" class="float-right">
+        <button type="submit" class="btn btn-danger" style="height: 40px; width: 150px">Log Out</button>
+    </form>
+
+    <form action="/home/manager" method="get">
+        <button type="submit" class="btn btn-warning">Chỉnh sửa danh sách món</button>
+    </form>
+    <hr>
+
+    <div class="text-center">
+        <form action="/home" method="post">
+            <div class="input-group border-primary">
+                <input type="search" name="search_name" class="form-control rounded border-primary"
+                       placeholder="Tìm kiếm..."/>
+                <button type="submit" class="btn btn-outline-primary">search</button>
+            </div>
+        </form>
+    </div>
+    <hr>
+    <h4>Kết quả tìm kiếm:</h4>
+    <form action="/home/insert_temp" method="post">
+        <table class="table table-striped">
+            <tr class="bg-info">
+                <th>STT:</th>
+                <th>Tên món:</th>
+                <th>Giá:</th>
+                <th>Số lượng:</th>
+            </tr>
+            <tr><td colspan="4" class="text-lg-center"><i>Không có kết quả</i></td></tr>
+        </table>
+    </form>
+    <hr>
+
+    <h2>Hóa đơn mới:</h2>
+    <form action="/home/insert_list_bill" method="post">
+
+        <table class="table table-striped text-center">
+            <tr>
+                <th>Mã hóa đơn:</th>
+                <td><input type="text" name="id_bill" class="text-center" style="width: 100%; height: 40px" readonly></td>
+            </tr>
+            <tr>
+                <th>STT</th>
+                <th>Sản phẩm</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+            </tr>
+            {result}
+            <tr class="text-lg-center">
+                <th>Tổng tiền:</th>
+                <td></td>
+                <td><b><i></i></b></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="submit" value="Thêm hóa đơn" class="btn btn-success">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <hr>
+
+    <h1>Danh sách hóa đơn:</h1>
+    <form action="/home/bill" method="">
+        <table class="table table-striped">
+            <tr>
+                <th>STT</th>
+                <th>Mã hóa đơn</th>
+                <th>Tổng tiền</th>
+                <th>Tình trạng</th>
+                <th></th>
+            </tr>
+            {list-bill}
+        </table>
+    </form>
+
+    <hr>
+
+
+    <hr>
+
+</div>
+
+</body>
+</html>

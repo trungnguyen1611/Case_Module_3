@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manager</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../css/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="text-center">
+        <form action="/home/manager/add" method="post">
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>
+                        <h2>Thêm món:</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="type" class="" placeholder="Loại đồ uống" required></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="name" class="" placeholder="Tên đồ uống" required></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="price" class="" placeholder="Giá đồ uống" required></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" class="btn btn-success" style="width:150px" value="Add"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div>
+        <form action="/home" method="get">
+            <input type="submit" class="btn btn-group btn-secondary" value="Back to home">
+        </form>
+    </div>
+    <hr>
+
+    <h1>Danh sách món:</h1>
+    <table class="table table-striped table-hover text-center">
+        <tr>
+            <th>STT</th>
+            <th>Loại</th>
+            <th>Tên</th>
+            <th colspan="2">Giá</th>
+            <th></th>
+            <th></th>
+        </tr>
+        {result}
+    </table>
+    <div>
+        <form action="/home" method="get">
+            <input type="submit" class="btn btn-group btn-secondary" value="Back to home">
+        </form>
+    </div>
+</div>
+
+<hr>
+
+
+
+</body>
+</html>
